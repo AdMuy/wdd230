@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
+
+:root {
+	--primary: #00ADB5;
+	--secondary: #97CC04;
+	--background1: #002433;
+	--background2: #D8E3E7;
+}
+
+/* General style for horizontal menu */
+nav {
+	background-color: var(--primary);
+	text-align: center;
+	box-shadow: 0 0 30px #333;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+
+nav div {
+	flex: 1 1 auto;
+}
+
+nav a {
+	display: block;
+	text-align: center;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: white;
+}
+
+nav a:hover {
+	background-color: var(--background1);
+	border-radius: 25px;
+	color: var(--secondary);
+}
+
+
+/* Style for color-scheme */
+
+#primary{
+	background-color: var(--primary);
+}
+
+#secondary{
+	background-color: var(--secondary);
+}
+
+#background1{
+	background-color: var(--background1);
+	color: white;
+}
+
+#background2{
+	background-color: var(--background2);
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+/* Style for typography */
+#heading-font{
+	font-family: "Lora";
+	background-color: var(--background2);
+}
+
+#paragraph-font{
+	font-family: "Roboto Slab";
+	background-color: var(--background2);
+}
+
+
+/***********************************************/
+/** Media Queries for larger views *************/
+/***********************************************/
+
+@media (min-width: 37.5em) {
+	nav {
+		flex-direction: row;
+	}
+	
+	nav a {
+		font-size: 1.1rem;
+	}
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	main picture {
+		display: block;
+	}
+}
+
+@media (min-width: 48em) {
+	nav a {
+		font-size: 1.3rem;
+	}
+}
